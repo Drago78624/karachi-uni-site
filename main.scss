@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+$colors: (
+  dark-green: #447e36,
+  light-green: #e0e5ca,
+);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 99.1vw;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  // overflow-: hidden;
+}
+
+.social-media-handles__main-container {
+  width: 100%;
+  height: 3%;
+  background-color: map-get($colors, "dark-green");
+  display: flex;
+  justify-content: center;
+  .social-media-handles__main-container--sub-container {
+    width: 60%;
+    height: 100%;
+    // background-color: yellow;
+    display: flex;
+    justify-content: flex-end;
+    .social-media__handles {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      .social-media__handle {
+        // background-color: red;
+        padding: 0.4rem 0.8rem;
+        border-left: 2px solid map-get($colors, "light-green");
+        a {
+          text-decoration: none;
+          color: map-get($colors, "light-green");
+        }
+      }
+      .social-media__handle:hover {
+        background-color: map-get($colors, "light-green");
+        a {
+          color: map-get($colors, "dark-green");
+        }
+      }
+    }
+  }
+}
+
+.main-header {
+  width: 100%;
+  height: 13%;
+  background-color: map-get($colors, "light-green");
+  display: flex;
+  justify-content: center;
+  .main-header__main-container {
+    width: 60%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    img {
+      margin-top: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.main-navbar {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  .main-navbar__container {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    bottom: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 10px gray;
+    .dropdown {
+      margin-left: 0.3rem;
+      a {
+        color: white;
+      }
+      .dropdown-item {
+        color: map-get($colors, "dark-green");
+      }
+    }
+    button {
+      padding: 0.3rem 0.9rem;
+      border-radius: 10px;
+      border: 0;
+      color: map-get($colors, "dark-green");
+      background-color: #212529;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: map-get($colors, "dark-green");
+      color: map-get($colors, "light-green");
+    }
+  }
+}
+
+.main-slider__container {
+  width: 100%;
+  height: 27.5%;
+  display: flex;
+  justify-content: center;
+  .main-slider {
+    width: 57.7rem;
+    height: 18rem;
+    background-image: url(images/banner-sjgate-a22.jpg);
+    box-shadow: 0 0 5px gray;
+    list-style: none;
+    font-size: 2rem;
+    .ti-more-alt {
+      position: relative;
+      left: 50%;
+      top: 92%;
+      color: map-get($colors, "dark-green");
+    }
+  }
+  .common-arrow {
+    width: 50px;
+    height: 50px;
+    background-color: map-get($colors, "light-green");
+  }
+  .slider-arrow__right,
+  .slider-arrow__left {
+    @extend .common-arrow;
+    position: relative;
+    top: 40%;
+    list-style: none;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: map-get($colors, "dark-green");
+    border: 1px solid map-get($colors, "dark-green");
+    box-shadow: 0 0 10px gray;
+    cursor: pointer;
+  }
+  .slider-arrow__left {
+    left: 1.3%;
+    .ti-angle-double-left {
+      transform: rotate(-45deg);
+    }
+  }
+  .slider-arrow__right {
+    right: 1.3%;
+    .ti-angle-double-right {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.main-heading__container {
+  width: 100%;
+  height: 5%;
+  // background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .main-heading {
+    width: 57.7rem;
+    // background-color: blueviolet;
+    font-size: 1.5rem;
+    color: map-get($colors, "dark-green");
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .main-heading :hover {
+    text-shadow: 0 0 1px gray;
+    text-decoration: underline;
+  }
+}
+
+main {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .section-line {
+    width: 65%;
+    height: 0.1%;
+    background-color: gray;
+    box-shadow: 0 0 5px gray;
+  }
+  .latest-button__section {
+    width: 60%;
+    height: 4.4%;
+    // background-color: red;
+    margin: 0.5rem 0;
+    border-left: 6px solid map-get($colors, "dark-green");
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .latest-tag {
+      font-size: 1.5rem;
+      margin-left: 1rem;
+      padding-right: 1rem;
+      color: map-get($colors, "dark-green");
+    }
+    .text {
+      font-size: 0.9rem;
+      color: map-get($colors, "dark-green");
+    }
+    .text:hover {
+      text-decoration: underline;
+    }
+    .admissions-tab {
+      font-size: 1.5rem;
+      color: white;
+      background: map-get($colors, "dark-green");
+      padding: 0.7rem 1rem;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+.welcome__section {
+  width: 100%;
+  height: 22%;
+  display: flex;
+  justify-content: center;
+  .welcome__section--container {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: map-get($colors, "light-green");
+    border-radius: 100px;
+    border-bottom: 2px solid darkgreen;
+    box-shadow: 3px 3px 10px gray;
+  }
+  .welcome__section--heading {
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: map-get($colors, "dark-green");
+    }
+  }
+  .welcome__section--text {
+    width: 70%;
+    font-size: 1.1rem;
+    text-align: center;
+    p {
+      span {
+        color: map-get($colors, "dark-green");
+      }
+      span:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.main-content__section {
+  width: 100%;
+  height: 70%;
+  // background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .main-content__container {
+    width: 60%;
+    height: 70%;
+    // background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    .main-content__box-1 {
+      width: 44%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      div {
+        width: 49%;
+        height: 100%;
+        background-color: map-get($colors, "light-green");
+        border: 2px solid map-get($colors, "dark-green");
+        padding-top: 0.5rem;
+        h5 {
+          font-size: 1.6rem;
+          color: darkgreen;
+          text-align: center;
+          font-weight: bold;
+        }
+        li {
+          border-bottom: 1px solid darkgreen;
+        }
+      }
+    }.main-content__box-2 {
+      width: 35%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      div {
+        width: 100%;
+        height: 49%;
+        // background-color: cadetblue;
+        background-color: map-get($colors, "light-green");
+        border: 2px solid map-get($colors, "dark-green");
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h5 {
+          font-size: 1.6rem;
+          color: darkgreen;
+          text-align: center;
+          font-weight: bold;
+          margin-top: 2.5rem;
+        }
+        .departments-search-bar {
+          width: 90%;
+          padding: 0;
+        }
+        p {
+          span {
+            color: map-get($colors, "dark-green");
+          }
+          span:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .main-content__box-3 {
+      width: 220px;
+      height: 246px;
+      img {
+        border-radius: 15px;
+        box-shadow: 3px 3px 10px gray;
+      }
+    }
+    .box {
+      // background-color: rgb(20, 20, 20);
+    }
+  }
+}
+
+.footer-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links {
+  width: 100%;
+  background-color: map-get($colors, "light-green");
+  h5 {
+    color: map-get($colors, "dark-green");
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: map-get($colors, "dark-green");
+  }
+}
+
+.main-footer {
+  width: 100%;
+  height: 5%;
+  background-color: #212529;
+  display: flex;
+  justify-content: center;
+  .main-footer__container {
+    width: 65%;
+    height: 100%;
+    // background-color: lightgray;
+    display: flex;
+    align-items: center;
+    .copyright-text__container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .text {
+        color: white;
+      }
+      .text span {
+        color: map-get($colors, "dark-green");
+      }
+      .handles-container {
+        display: flex;
+        .handle-box {
+          padding: 0 1rem;
+          border-left: 1px solid map-get($colors, "light-green");
+          a {
+            color: map-get($colors, "dark-green");
+            text-decoration: none;
+          }
+          a:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
